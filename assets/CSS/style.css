@@ -1,0 +1,17 @@
+#btn-cep {
+    margin-bottom:3%;
+}
+
+#app {
+    width:400px;
+    border: 2px solid black;
+    border-collapse:collapse;
+}
+#app th {
+    background-color:black;
+    color:white;
+    height:30px;
+}
+#app td {
+    border: 1px solid black;
+}
