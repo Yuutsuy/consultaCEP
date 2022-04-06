@@ -23,12 +23,12 @@
             <th>Data</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="id"></td>
+            <td id="nome"></td>
+            <td id="email"></td>
+            <td id="senha"></td>
+            <td id="nivel"></td>
+            <td id="data"></td>
         </tr>
     </table>
 
@@ -36,6 +36,7 @@
     <script type="application/javascript">
 
     var elApp = document.getElementById('btn-cep'); // linkando var elApp com botão
+    var elId = document.getElementById('id')
 
     var consultaCEP = function() {
         
@@ -46,9 +47,10 @@
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4){
                 var res = JSON.parse(xhr.responseText);
+                console.log(res);
+                
 
-        // criar alteração
-        var elId = document.createAttribute('td');
+        // chamando var elId e alterando ela para receber valor de id
         elId.innerText = res.elLogradouro;
             }
         };
