@@ -37,6 +37,11 @@
 
     var elApp = document.getElementById('btn-cep'); // linkando var elApp com botão
     var elId = document.getElementById('id')
+    var elNome = document.getElementById('nome')
+    var elEmail = document.getElementById('email')
+    var elSenha = document.getElementById('senha')
+    var elNivel = document.getElementById('nivel')
+    var elData = document.getElementById('data')
 
     var consultaCEP = function() {
         
@@ -47,11 +52,14 @@
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4){
                 var res = JSON.parse(xhr.responseText);
-                console.log(res);
-                
-
-        // chamando var elId e alterando ela para receber valor de id
-        elId.innerText = res.elLogradouro;
+            
+                // chamando os elementos e alterando-os para receber um texto
+                elId.innerText = res.id;
+                elNome.innerText = res.nome;
+                elEmail.innerText = res.email;
+                elSenha.innerText = res.senha;
+                elNivel.innerText = res.nivel;
+                elData.innerText = res.data;
             }
         };
     }
