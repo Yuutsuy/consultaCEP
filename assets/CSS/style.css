@@ -2,6 +2,14 @@
     margin:20px;
 }
 #btn-cep button {
+    border-radius:6px;
+    width:100px;
+    height:40px;
+    border: 2px solid black;
+    background-color:crimson;
+    color:white;
+}
+#btn-cep button:active {
     width:100px;
     height:40px;
     border: 2px solid black;
